@@ -1,34 +1,20 @@
-import { div } from 'prelude-ls';
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 
-const ToDoList = () => {
+import AppHeader from './components/app-header';
+import SearchPanel from './components/search-panel';
+import TodoList from './components/todo-list';
+
+const App = () => {
+
   return (
-    <ul>
-      <li>Learn react</li>
-      <li>Build Awesome App</li>
-    </ul>
+    <div>
+      <AppHeader />
+      <SearchPanel />
+      <TodoList />
+    </div>
   );
 };
 
-const AppHeader = () => {
-  return <h1> My Todo List</h1>;
-};
-
-const SearchPanel = () => {
-  return <input placeholder='search'></input>
-};
-
-const App = () => {
-  return (
-    <div>
-    <AppHeader/>
-    <SearchPanel/>
-    <ToDoList/>
-  </div>
-  )
-}
-
-
-ReactDom.render(<App/>,
+ReactDOM.render(<App />,
   document.getElementById('root'));

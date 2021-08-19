@@ -1,6 +1,7 @@
 import React from 'react';
-
 import TodoListItem from './todo-list-item';
+import './todo-list.css'
+
 
 const TodoList = ({todos}) => {
   
@@ -9,7 +10,7 @@ const TodoList = ({todos}) => {
     const {id, ...itemProps} = item;
 
     return (
-      <li key={id}>
+      <li key={id} className='list-group-item'>
         {/* Destructuring each element of the array 'todos'
         by using spred operator*/}
         <TodoListItem {... itemProps} /> 
@@ -18,7 +19,7 @@ const TodoList = ({todos}) => {
   });
 
   return (
-    <ul>
+    <ul className='list-group todo-list'>
       {elements}
     </ul>
   );

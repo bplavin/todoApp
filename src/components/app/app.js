@@ -4,6 +4,7 @@ import AppHeader from '../app-header';
 import SearchPanel from '../search-panel';
 import TodoList from '../todo-list';
 import ItemStatusFilter from '../item-status-filter';
+import ItemAddForm from '../item-add-form';
 
 import './app.css';
 
@@ -17,6 +18,21 @@ export default class App extends Component {
     ]
   };
 
+  deleteItem = (id) => {
+    this.setState(({ todoData }) => {
+      const idx = todoData.findIndex((el) => el.id === id);
+
+      const newArray = [
+        ...todoData.slice(0, idx),
+        ...todoData.slice(idx + 1)
+      ];
+
+      return {
+        todoData: newArray 
+       };
+    });
+  };
+
   render () {
     return (
       <div className="todo-app">
@@ -27,7 +43,9 @@ export default class App extends Component {
         </div>
   
         <TodoList todos={this.state.todoData}
-        onDeleted={ (id) => console.log('del', id)} />
+        onDeleted={ this.deleteItem} />
+
+        <ItemAddForm />
       </div>
     );
   }

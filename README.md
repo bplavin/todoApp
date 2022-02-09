@@ -1,5 +1,4 @@
 ## React Todo List application
-##
 An awesome app to make a list of "todo" items. 
 ## Functionality
 - Type text in the box at the bottom to add note

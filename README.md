@@ -1,13 +1,14 @@
 ## React Todo List application
 An awesome app to make a list of "todo" items. 
 ## Functionality
-- Type text in the box at the bottom to add note
+- Type text in the box at the bottom to add a note
 - Click on exclamation mark to highlight the note as "important"
 - Click on the trash icon to remove a note from the list
-- Click on the note to mark it as "done"
+- Click on the note to mark as "done"
 - Navigate through All/Active/Done to see wanted notes
-- Type in text to serach box at the top to look for a specific note
+- Type in text to the search box at the top to look for a specific note
 - Counter is located at the top right corner to track the number of incomplited notes
+ 
 ## Technologies Used
 - JSX
 - React State
